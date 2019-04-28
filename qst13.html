@@ -9,7 +9,16 @@
     <div id="interativo">Clique-me</div>
 
     <script>
-    
+
+        var interativo = document.getElementById("interativo");
+
+        interativo.addEventListener("click", funcionou);
+
+        function funcionou(){
+            interativo.textContent = "Funcionou!";
+        }
+
+
     </script>
     
 </body>
