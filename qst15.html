@@ -54,8 +54,21 @@
                 {
                     resultado.textContent = "Parabéns " + nome.textContent + "! Você está aprovado com média " + media + "!";
                 }else
-                {
-                    resultado.textContent = "Você está reprovado com média " + media + "!";
+                {   
+                    resultado.textContent = "Você está reprovado com média " + media;
+                    if(Number(confeitaria.textContent)<Number(coberturas.textContent) && Number(confeitaria.textContent)<Number(bolos.textContent))
+                    {
+                        melhorias.textContent = nome.textContent + ", considere estudar mais confeitaria";
+                    }
+                    if(Number(bolos.textContent)<Number(coberturas.textContent) && Number(bolos.textContent)<Number(confeitaria.textContent))
+                    {
+                        melhorias.textContent = nome.textContent + ", considere estudar mais broas e bolos";
+                    }
+                   if(Number(coberturas.textContent)<Number(confeitaria.textContent) && Number(coberturas.textContent)<Number(bolos.textContent))
+                   {
+                        melhorias.textContent =  nome.textContent + ", considere estudar mais coberturas";   
+                   }
+                    
                 }
             }
 
