@@ -39,9 +39,24 @@
 
             botaoLimpar.addEventListener("click",limparClick);
 
-            function limparClick(){
+            function limparClick()
+            {
                 resultado.textContent = " ";
                 melhorias.textContent = " ";
+            }
+
+            botaoAvaliar.addEventListener("click",avaliarClick);
+
+            function avaliarClick()
+            {
+                media = Number(Number(confeitaria.textContent)+Number(coberturas.textContent)+Number(bolos.textContent))/3;
+                if(media>=70)
+                {
+                    resultado.textContent = "Parabéns " + nome.textContent + "! Você está aprovado com média " + media + "!";
+                }else
+                {
+                    resultado.textContent = "Você está reprovado com média " + media + "!";
+                }
             }
 
           
